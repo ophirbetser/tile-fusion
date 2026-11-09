@@ -9,3 +9,9 @@ A sliding-tile merge puzzle for the browser.
 
 ## Run locally
 Open `index.html` in a browser. No build step needed.
+
+## Play online
+**https://ophirbetser.github.io/tile-fusion/**
+
+Every push to `main` deploys automatically with GitHub Actions to GitHub Pages
+(see `.github/workflows/deploy.yml`).

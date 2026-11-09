@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="tile-fusion: a sliding-tile merge puzzle. Use the arrow keys to fuse matching tiles.">
+  <title>tile-fusion</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="top">
+      <h1 class="logo">tile<span>·</span>fusion</h1>
+      <div class="scores">
+        <div class="score-box">
+          <span class="label">Score</span>
+          <span class="value" id="score">0</span>
+        </div>
+        <div class="score-box">
+          <span class="label">Best</span>
+          <span class="value" id="best">0</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="bar">
+      <p class="hint">Slide with <kbd>←</kbd><kbd>↑</kbd><kbd>→</kbd><kbd>↓</kbd> and fuse matching tiles.</p>
+      <button class="btn" id="new-game" type="button">New game</button>
+    </div>
+
+    <div class="board" id="board" aria-label="Game board" role="application">
+      <div class="cells" aria-hidden="true">
+        <div></div><div></div><div></div><div></div>
+        <div></div><div></div><div></div><div></div>
+        <div></div><div></div><div></div><div></div>
+        <div></div><div></div><div></div><div></div>
+      </div>
+      <div class="tiles" id="tiles"></div>
+
+      <div class="overlay" id="overlay" hidden>
+        <p class="overlay-title" id="overlay-title"></p>
+        <p class="overlay-text" id="overlay-text"></p>
+        <div class="overlay-actions">
+          <button class="btn" id="keep-going" type="button">Keep going</button>
+          <button class="btn btn-primary" id="try-again" type="button">New game</button>
+        </div>
+      </div>
+    </div>
+
+    <footer class="foot">Reach the <strong>2048</strong> tile to win · WASD and swipe work too</footer>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
